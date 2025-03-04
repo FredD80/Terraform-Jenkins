@@ -89,7 +89,7 @@ module "ec2_instance" {
               sudo usermod -aG docker ubuntu
 	      sudo usermod -aG docker ssm-user
               newgrp docker 
-              sudo docker run -d --name myapp -p 80:5000 ${var.docker_image_tag}
+              sudo docker run -d --name fredd1/flaskapp -p 8080:8080 
 
               EOF
 
