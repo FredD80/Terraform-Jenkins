@@ -87,7 +87,8 @@ module "ec2_instance" {
               sudo apt-get update -y
               sudo apt-get install -y docker-ce docker-ce-cli containerd.io
               sudo usermod -aG docker ubuntu
-              newgrp docker
+	      sudo usermod -aG docker ssm-user
+              newgrp docker 
               sudo docker run -d --name myapp -p 80:5000 ${var.docker_image_tag}
 
               EOF
