@@ -134,6 +134,14 @@ module "security_group" {
       description = "SSH"
       cidr_blocks = "${local.validated_ip}/32"
     }
+   
+    { 
+      from_port  = 8080
+      to_port    = 8080
+      protocol   = "tcp"
+      decription = "app port"
+      cidr_blocks = "0.0.0.0/0"
+    }
 
  
   ] 
