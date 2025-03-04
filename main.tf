@@ -89,7 +89,7 @@ module "ec2_instance" {
               sudo usermod -aG docker ubuntu
 	      sudo usermod -aG docker ssm-user
               newgrp docker 
-              sudo docker run -d --name flaskapp -p 8100:8100 fredd1/flaskapp 
+              sudo docker run -d -p 8100:8100 --name flaskapp fredd1/flaskapp 
 
               EOF
 
