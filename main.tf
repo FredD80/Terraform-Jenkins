@@ -133,7 +133,7 @@ module "security_group" {
       protocol    = "tcp"
       description = "SSH"
       cidr_blocks = "${local.validated_ip}/32"
-    }
+    },
    
     { 
       from_port  = 8080
