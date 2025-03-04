@@ -87,7 +87,6 @@ module "ec2_instance" {
               sudo apt-get update -y
               sudo apt-get install -y docker-ce docker-ce-cli containerd.io
               sudo usermod -aG docker ubuntu
-	      sudo usermod -aG docker ssm-user
               newgrp docker 
               sudo docker run -d -p 8100:8100 --name flaskapp fredd1/flaskapp 
 
