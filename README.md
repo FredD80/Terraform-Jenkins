@@ -1,1 +1,1 @@
-Project using Jenkins to pipeline terraform deploy AWS EC2. 
+Project using Jenkins pipeline to deploy AWS EC2 via terraform. 
